@@ -1,0 +1,86 @@
+// Variables
+$white: white;
+$default-margin: 10px;
+$default-padding: $default-margin;
+$main-color: #00b2c8;
+$main-color--hover: #0097a9;
+$default-border-radius: 10px;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  &--body {
+    &__text {
+      text-align: center;
+      color: white;
+      font-weight: 700;
+      padding-bottom: $default-padding * 2;
+    }
+
+    &__links {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+
+      .or {
+        color: $white;
+        margin: 0 $default-margin;
+      }
+
+      .btn-primary {
+        background-color: $main-color !important;
+        border: none !important;
+        border-radius: $default-border-radius;
+        padding: $default-padding $default-padding * 2;
+
+        &:hover {
+          background-color: $main-color--hover !important;
+        }
+      }
+
+      .card {
+        $card-width: 18rem;
+        margin: 0 $default-margin;
+        width: $card-width;
+      }
+    }
+
+    .btn-dark {
+      margin: $default-margin;
+    }
+  }
+
+  &--bg {
+    z-index: -10;
+    background: url(/images/main_bg.jpg) no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100%;
+    min-width: 1024px;
+
+    /* Set up proportionate scaling */
+    width: 100%;
+    height: auto;
+
+    /* Set up positioning */
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+}
+
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  color: $white;
+  
+  &--link {
+    font-weight: 700; 
+  }
+}
